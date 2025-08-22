@@ -4,16 +4,17 @@ import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import WhatsAppFloat from '@/components/layout/WhatsAppFloat'
-import { Toaster } from '@/components/ui/toaster'
 
-const inter = Inter({
+const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-inter',
+  display: 'swap'
 })
 
-const playfairDisplay = Playfair_Display({
+const playfair = Playfair_Display({ 
   subsets: ['latin'],
-  variable: '--font-playfair-display',
+  variable: '--font-playfair',
+  display: 'swap'
 })
 
 export const metadata: Metadata = {
@@ -73,13 +74,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfairDisplay.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="font-sans antialiased">
         <Header />
         <main>{children}</main>
         <Footer />
         <WhatsAppFloat />
-        <Toaster />
       </body>
     </html>
   )
