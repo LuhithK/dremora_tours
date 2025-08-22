@@ -95,8 +95,8 @@ const config: Config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        sans: ['system-ui', 'sans-serif'],
+        serif: ['Georgia', 'serif'],
       },
     },
   },
