@@ -74,7 +74,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfairDisplay.variable}`}>
-      <body className="antialiased">
+      <body className="font-sans antialiased">
         <Header />
         <main>{children}</main>
         <Footer />
