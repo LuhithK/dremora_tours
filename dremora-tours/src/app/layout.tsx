@@ -1,10 +1,18 @@
 import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
+import localFont from 'next/font/local'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import WhatsAppFloat from '@/components/layout/WhatsAppFloat'
 import { Toaster } from '@/components/ui/toaster'
+
+const geist = localFont({
+  src: [
+    { path: './fonts/geist/Geist-Regular.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/geist/Geist-Bold.woff2', weight: '700', style: 'normal' },
+  ],
+  variable: '--font-geist',
+})
 
 export const metadata: Metadata = {
   title: 'Dremora Tours - Explore the World with Us',
@@ -17,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={GeistSans.className}>
+    <html lang="en" className={geist.variable}>
       <body>
         <Header />
         <main>{children}</main>
